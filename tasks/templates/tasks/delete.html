@@ -1,0 +1,63 @@
+<div class="center-column">
+	<p class="text">Are you sure you want to delete "{{item}}"?</p>
+	<div class="container">
+		<form method="POST" action="">
+			{% csrf_token %}
+			<input class="delete_button" type="submit" name="Confirm" value="Delete">
+		</form>
+		<a href="{% url 'list' %}" class="cancel_button">
+		<input class="cancel_button" type="button" value="Cancel"></a>
+	</div>
+</div>
+<style>
+
+	body{
+        background-image: url("https://miro.medium.com/max/2000/0*mfUNFSHyrXnH7ZKf");background-color: #000000;
+	}
+
+	.delete_button{
+		margin: 0 auto;
+		background-color: #0f5561;
+		border-radius: 25px;
+		border-color: #050300;
+		color: white;
+		width:15%;
+		height:40px;
+		font-size: 13px;
+		font-weight: bold;
+		border-style: solid 5px;
+		border-color: rgb(196, 134, 128);
+	}
+
+	.cancel_button{
+		margin: 0 auto;
+		background-color: #0f5561;
+		border-radius: 25px;
+		border-color: #050300;
+		color: white;
+		width:15%;
+		height:40px;
+		font-size: 13px;
+		font-weight: bold;
+		border-style: solid 5px;
+		border-color: rgb(196, 134, 128);
+	}
+
+	.center-column{
+		text-align: center;
+		width:600px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: rgb(31, 27, 27);
+		border-radius: 25px;
+		border-style: solid 5px;
+		border-color: rgb(98, 171, 212);
+		box-shadow: 2px 2px 30px 0px rgb(252, 160, 142);
+	}
+
+	.text{
+		color: #fafafa;
+		font-size: 20px;
+	}
+
+</style>
